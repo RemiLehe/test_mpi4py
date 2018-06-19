@@ -1,8 +1,5 @@
 sudo: false
 language: python
-python:
-    - "2.7"
-    - "3.6"
 
 before_install:
   # Setup miniconda
@@ -10,9 +7,6 @@ before_install:
   - chmod +x miniconda.sh
   - ./miniconda.sh -b
   - export PATH=$HOME/miniconda3/bin:$PATH
-  # Create a virtual environment with the right version of python
-  - conda create -n testing python=$TRAVIS_PYTHON_VERSION --yes
-  - source activate testing
 
 # Install packages
 install:
